@@ -27,9 +27,14 @@ ImageMagick && \
 
 
 
-VOLUME ["/config", "/opt/calibre" ]
+VOLUME ["/config", "/opt/calibre", "/downloads" ]
 
 EXPOSE 8080
+
+
+# Add firstrun.sh to execute during container startup
+ADD firstrun.sh /etc/my_init.d/firstrun.sh
+RUN chmod +x /etc/my_init.d/firstrun.sh
 
 #RUN cd /opt && \
 #wget --no-check-certificate -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('/opt/', True)"
