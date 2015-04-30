@@ -25,6 +25,7 @@ xdg-utils \
 ImageMagick && \
 mkdir /opt/calibre
 
+RUN mkdir /downloads
 
 
 VOLUME ["/config", "/opt/calibre", "/downloads" ]
