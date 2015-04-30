@@ -23,7 +23,7 @@ wget \
 python \
 xdg-utils \
 ImageMagick && \
-mkdir /opt/calibre
+#mkdir /opt/calibre
 
 
 
