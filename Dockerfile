@@ -50,7 +50,7 @@ RUN cron
 
 
 #RUN cd /opt && \
-#wget --no-check-certificate -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('/opt/', True)"
+wget --no-check-certificate -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('/opt/', True)"
 
-#CMD ["/opt/calibre/calibre-server","--with-library=/config"]
+CMD ["/opt/calibre/calibre-server","--with-library=/config"]
 
