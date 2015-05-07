@@ -12,3 +12,6 @@ else
   /opt/calibre/calibre-server --with-library /config --username $CALUSER --password $CALPASSWORD
 fi
 
+crontab /root/crons.conf
+
+cron

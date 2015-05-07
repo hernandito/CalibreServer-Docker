@@ -43,14 +43,13 @@ RUN chmod +x /etc/my_init.d/firstrun.sh
 ADD crons.conf /root/crons.conf
 
 # Use the crontab file
-RUN crontab /root/crons.conf
+#RUN crontab /root/crons.conf
 
 # Start cron
-RUN cron
+#RUN cron
 
-
+# The commands below are now run in firstrun.sh. Not needed here anymore.
 #RUN cd /opt && \
-wget --no-check-certificate -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('/opt/', True)"
-
-CMD ["/opt/calibre/calibre-server","--with-library=/config"]
+#wget --no-check-certificate -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('/opt/', True)"
+#CMD ["/opt/calibre/calibre-server","--with-library=/config"]
 
