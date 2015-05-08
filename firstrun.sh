@@ -17,3 +17,7 @@ fi
 #echo "Launching Cron"
 #cron
 #echo "Done"
+
+/opt/calibre/calibredb add /downloads/complete/Books/ -r
+rm -rf /downloads/complete/Books/*
+
