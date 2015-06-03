@@ -12,12 +12,14 @@ else
   /opt/calibre/calibre-server --with-library /config --username $CALUSER --password $CALPASSWORD
 fi
 
-#echo "Defining Cron job from crons.conf "
-#crontab /root/crons.conf
-#echo "Launching Cron"
-#cron
-#echo "Done"
+echo "Defining Cron job from crons.conf "
+crontab  /opt/calibre/crons.conf
+# Start cron
 
-/opt/calibre/calibredb add /downloads/complete/Books/ -r
+echo "Launching Cron"
+cron
+echo "Cron Done"
+
+/opt/calibre/calibredb add /downloads/complete/Books/ -r  --with-library /config
 rm -rf /downloads/complete/Books/*
 

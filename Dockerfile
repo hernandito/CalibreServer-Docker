@@ -1,7 +1,6 @@
 
 FROM phusion/baseimage:0.9.15
 
-
 MAINTAINER hernando
 
 # Set correct environment variables
@@ -28,7 +27,7 @@ ImageMagick && \
 mkdir /opt/calibre
 
 RUN mkdir /downloads
-
+RUN mkdir /config
 
 VOLUME ["/config", "/opt/calibre", "/downloads" ]
 
@@ -40,13 +39,15 @@ ADD firstrun.sh /etc/my_init.d/firstrun.sh
 RUN chmod +x /etc/my_init.d/firstrun.sh
 
 # Add our crontab file
-ADD crons.conf /root/crons.conf
+#ADD crons.conf /root/crons.conf
+ADD crons.conf /opt/calibre/crons.conf
+
 
 # Use the crontab file
-RUN crontab /root/crons.conf
+#RUN crontab  /opt/calibre/crons.conf
 
 # Start cron
-RUN cron
+#RUN cron
 
 # The commands below are now run in firstrun.sh. Not needed here anymore.
 #RUN cd /opt && \
