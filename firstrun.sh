@@ -13,7 +13,7 @@ else
 fi
 
 echo "Defining Cron job from crons.conf "
-crontab  /opt/calibre/crons.conf
+crontab  /home/crons.conf
 # Start cron
 
 echo "Launching Cron"
