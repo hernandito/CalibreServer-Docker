@@ -1,7 +1,6 @@
 
 FROM phusion/baseimage:0.9.15
 
-
 MAINTAINER hernando
 
 # Set correct environment variables
