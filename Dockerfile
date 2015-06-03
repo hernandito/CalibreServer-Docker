@@ -40,7 +40,7 @@ RUN chmod +x /etc/my_init.d/firstrun.sh
 
 # Add our crontab file
 #ADD crons.conf /root/crons.conf
-ADD crons.conf /opt/calibre/crons.conf
+ADD crons.conf /home/crons.conf
 
 
 # Use the crontab file
