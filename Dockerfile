@@ -27,7 +27,7 @@ ImageMagick && \
 mkdir /opt/calibre
 
 RUN mkdir /downloads
-
+RUN mkdir /config
 
 VOLUME ["/config", "/opt/calibre", "/downloads" ]
 
