@@ -45,10 +45,10 @@ ADD crons.conf /opt/calibre/crons.conf
 
 
 # Use the crontab file
-RUN crontab  /opt/calibre/crons.conf
+#RUN crontab  /opt/calibre/crons.conf
 
 # Start cron
-RUN cron
+#RUN cron
 
 # The commands below are now run in firstrun.sh. Not needed here anymore.
 #RUN cd /opt && \
